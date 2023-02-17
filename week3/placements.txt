@@ -1,0 +1,6 @@
+select Name from Students
+inner join Friends on Students.ID = Friends.ID
+inner join Packages as PS on Students.ID = PS.ID
+inner join Packages as PF on Friends.Friend_ID = PF.ID
+where PF.Salary > PS.Salary
+order by PF.Salary;
